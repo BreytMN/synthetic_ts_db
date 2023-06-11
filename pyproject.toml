@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "synthetic-ts-db"
+version = "0.1.0"
+description = "Synthetic ts container to generate a database for educational and testing purposes"
+authors = ["Breytner Nascimento breytner.nascimento@gmail.com"]
+readme = "README.md"
+packages = [{include = "synthetic_ts_db"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
