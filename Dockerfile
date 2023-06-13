@@ -1,9 +1,11 @@
 FROM python:3.11.4-slim-buster
 
+COPY requirements.txt .
+RUN python -m pip install --upgrade pip && \
+    python -m pip install --no-cache-dir -r requirements.txt && \
+    rm requirements.txt
+
+COPY src/ /app
 WORKDIR /app
 
-COPY . /app
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-CMD ["python", "main.py", "--start-time", "2023-06-10 00:00:00"]
+CMD ["python", "main.py"]
